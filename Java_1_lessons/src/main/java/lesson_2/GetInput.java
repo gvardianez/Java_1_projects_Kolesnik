@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class GetInput {
 
-    private static long l;
+    private static long inputNumber;
 
     public static String getUserInputString(String text) {
         String inputLine = null;
@@ -29,25 +29,25 @@ public class GetInput {
         System.out.print(text + " ");
         Scanner in = new Scanner(System.in);
         try {
-            l = in.nextLong();
+            inputNumber = in.nextLong();
         } catch (Exception e) {
             getUserInputLong("Некорректный ввод, повторите");
         }
-        return l;
+        return inputNumber;
     }
 
     public static long getUserInputYear(String text) {
         System.out.print(text + " ");
         Scanner in = new Scanner(System.in);
         try {
-            l = in.nextLong();
+            inputNumber = in.nextLong();
         } catch (Exception e) {
             getUserInputLong("Некорректный ввод, повторите");
         }
-        if (l < 0) {
+        if (inputNumber < 0) {
             getUserInputLong("Некорректный ввод, повторите");
         }
-        return l;
+        return inputNumber;
     }
 
 }
